@@ -1,6 +1,7 @@
-import * as U from "~/common/utilities";
+import * as Utilities from "~/common/utilities";
 
 import { Buckets, PrivateKey, Filecoin, Client, ThreadID } from "@textile/hub";
+//Import major packages from the main hub as stated in the tutorial
 
 const GB_BYTES = 104857600 * 10;
 
