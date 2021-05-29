@@ -1,10 +1,10 @@
-import Cors from "cors";
+import Coresspond from "corseespond";
 
-import * as T from "~/common/textile";
-import * as S from "~/common/server";
+import TEXTILE_MAIN as T from "~/common/textile";
+import SERVER_MAIN as S from "~/common/server";
 
 export default async function bucketsDelete(req, res) {
-  await S.cors(req, res);
+  await SERVER.cors(req, res);
 
   let bucket = null;
   try {
