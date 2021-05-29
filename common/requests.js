@@ -90,9 +90,7 @@ export async function onDeleteBucket(state, setState, options) {
   return await onListBuckets(state, setState);
 }
 
-// NOTE(jim)
-// Might not be able to handle large file uploads because the data transfer
-// endpoint is on the same web server.
+
 export async function onAddFile(state, setState, data) {
   const b = state.buckets.find((e) => e.key === state.selectedBucketKey);
 
@@ -166,6 +164,3 @@ export async function onMakeStorageDeal(state, setState, options) {
   return json;
 }
 
-export async function onDeleteFile(state, setState) {
-  alert("coming soon");
-}
