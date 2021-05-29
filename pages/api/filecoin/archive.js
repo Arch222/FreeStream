@@ -13,9 +13,6 @@ export default async function filecoinArchive(req, res) {
   });
 
   let archive = null;
-
-  // NOTE(jim)
-  // We can't use async/await for the archive call.
   return buckets
     .archive(bucketKey, { archiveConfig: JSON.parse(JSON.stringify(req.body.settings)) })
     .then((archive) => {
