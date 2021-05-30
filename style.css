@@ -1,0 +1,28 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  line-height: 1.3em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+section {
+  text-align: center;
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+li {
+  margin-top: 10px;
+  width: 90%;
+}
+
+
+footer {
+  margin-top: 100px;
+}

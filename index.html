@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/unlock.js" defer></script>
+    <script src="/index.js" defer></script>
+  </head>
+  <body>
+    <h1>Free Stream - Alex Fitness Influencer</h1>
+
+    <p>
+      Purchase Alex's Class for 1 hour of behind the scenes into his workout
+      routine!
+    </p>
+    <section>
+      <p class="unlock-protocol loading">
+        Loading!
+      </p>
+
+      <p class="unlock-protocol unlocked" style="display:none">
+        Congrat's You've purchased! You can verify your ticket
+        <a target="_blank" href="https://app.unlock-protocol.com/keychain/"
+          >here</a
+        >. Wait for the stream to go live and enjoy!
+      </p>
+      <div class="center">
+        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+        <video id="video" controls class="unlock-protocol unlocked"></video>
+        <script>
+          if (Hls.isSupported()) {
+            var video = document.getElementById("video");
+            var hls = new Hls();
+            hls.loadSource(
+              "https://cdn.livepeer.com/hls/fb04eg78so3ga86y/index.m3u8"
+            );
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+              video.play();
+            });
+          } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+            video.src =
+              "https://cdn.livepeer.com/hls/fb04eg78so3ga86y/index.m3u8";
+            video.addEventListener("canplay", function() {
+              video.play();
+            });
+          }
+        </script>
+      </div>
+
+      <!--       <video>
+
+            <source src="https://cdn.livepeer.com/hls/fb04eg78so3ga86y/index.m3u8"
+            type="video/m3u8">
+      </video> -->
+
+      <p class="unlock-protocol locked" style="display:none">
+        <button
+          onclick="window.unlockProtocol && window.unlockProtocol.loadCheckoutModal()"
+        >
+          Purchase the Class now!
+        </button>
+      </p>
+    </section>
+
+    <footer></footer>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+</html>

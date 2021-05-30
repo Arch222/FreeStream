@@ -1,0 +1,1 @@
+document.getElementById('lockAddress').innerText = Object.keys(unlockProtocolConfig.locks)[0]
