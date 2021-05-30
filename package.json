@@ -1,0 +1,19 @@
+{
+  "name": "FreeStream",
+  "version": "1.0.0",
+  "description": "Decentralied Live Streaming",
+  "main": "index.js",
+  "repository": "https://github.com/Arch222/FreeStream.git",
+  "author": "carrabre <40183833+carrabre@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cookie": "^0.4.1",
+    "express": "^4.17.1",
+    "firestore": "^1.1.6",
+    "is-ip": "^3.1.0",
+    "path": "^0.12.7",
+    "unique-names-generator": "^4.5.0",
+    "websocket": "^1.0.34"
+  }
+}
